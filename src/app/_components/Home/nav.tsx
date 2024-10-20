@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-export const NavButtons = ["Assine aqui", "Dashboard", "Home", "Sistema", "Comunidade"]
+export const NavButtons = ["Home", "Dashboard", "Sistema", "Comunidade", "Monetização"]
 
 interface props{
     func: React.Dispatch<React.SetStateAction<number>>,

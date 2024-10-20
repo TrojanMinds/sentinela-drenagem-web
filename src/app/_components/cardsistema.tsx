@@ -87,7 +87,6 @@ export default function CardsSistema() {
           </p>
           <h3 className="mt-4 text-2xl">Alertas Personalizados</h3>
           <p>
-            {" "}
             Os usuários podem personalizar o sistema de alertas de acordo com
             suas necessidades. Moradores e comerciantes podem escolher monitorar
             áreas específicas (como suas residências ou locais de trabalho),

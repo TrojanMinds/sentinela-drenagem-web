@@ -1,4 +1,4 @@
-import Box from "./boxcardsistema";
+import Box from "./boxcards";
 
 export default function CardsSistema() {
   return (
@@ -78,7 +78,6 @@ export default function CardsSistema() {
           </p>
           <h3 className="mt-4 text-2xl">Alertas Automáticos</h3>
           <p>
-        
             Quando o sistema detecta um entupimento nos bueiros ou canais de
             drenagem ou identifica um aumento significativo no nível da água,
             ele envia notificações automáticas em tempo real. Isso possibilita

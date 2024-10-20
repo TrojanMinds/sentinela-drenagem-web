@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import { getServerAuthSession } from '~/server/auth'
 
-export const NavButtons = ["Assine aqui", "Dashboard", "Home", "Sistema", "Comunidade"]
+export const NavButtons = ["Home", "Dashboard", "Sistema", "Comunidade", "Monetização"]
 
 interface props{
     func: React.Dispatch<React.SetStateAction<number>>,

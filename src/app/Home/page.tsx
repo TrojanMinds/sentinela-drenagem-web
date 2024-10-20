@@ -46,7 +46,7 @@ export default async function Home({
           </div>
 
           {/* Down */}
-          <div className="flex flex-col items-center w-full h-[80vh] gap-8 pt-4 overflow-y-scroll px-8">
+          <div className="flex flex-col items-center w-full h-[80vh] gap-8 pt-4 overflow-y-scroll px-8 mt-[2em]">
             <Stations i={selected}/>
           </div>
         </div>

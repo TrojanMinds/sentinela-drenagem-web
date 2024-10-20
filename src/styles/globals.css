@@ -32,4 +32,14 @@
     .ClipStar{
         clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     }
+
+    .ComunidadeDiv1{
+        @apply mt-[2em]
+    }
+    .ComunidadeDiv1 > h1{
+        @apply text-Yellow
+    }
+    .ComunidadeDiv1 > p{
+        @apply ml-[1em]
+    }
 }

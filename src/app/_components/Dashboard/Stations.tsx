@@ -7,11 +7,13 @@ interface props{
 }
 
 async function Stations({...props} : props) {
-    const data = props.i == "1" ? await api.user.GetUserFollowings() : await api.user.GetAllSatations()
+    const data = props.i == "1" ? await api.user.GetUserFollowings() :  await api.user.GetAllSatations()
+
+    if(props.i == "2") return <>Not implemented</>
 
   return (
     <>
-        {data.map((k,i) => <div className='w-full justify-between bg-BG/50 min-h-[20%] rounded-md p-4 flex flex-row items-center gap-4 opacity-80 hover:opacity-100 transition-all relative overflow-hidden'>
+        {data.map((k,i) => <div className='w-full justify-between bg-BG/50 2xl:min-h-[20%] min-h-[30%] rounded-md p-4 flex flex-row items-center gap-4 opacity-80 hover:opacity-100 transition-all relative overflow-hidden'>
             <div className={`absolute w-full h-full top-0 left-0 bg-gradient-to-t to-transparent
                 ${k.Status < 25 ? 'from-green-500/75' : k.Status < 50 ? "from-green-500/50" : k.Status < 75 ? "from-red-500/50" : "from-red-500/75" }
             `}/>

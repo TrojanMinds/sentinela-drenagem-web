@@ -1,4 +1,4 @@
-import Box from "./boxcardsistema";
+import Box from "./boxcards";
 
 export default function CardsSistema() {
   return (

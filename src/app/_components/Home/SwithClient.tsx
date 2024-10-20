@@ -5,6 +5,7 @@ import Nav, { NavButtons } from "./nav";
 import Image from "next/image";
 import { SessionProvider } from "next-auth/react";
 import CardsSistema from "../cardsistema";
+import CardsMonetizacao from "../cardsmonetizacao";
 
 function HomeCard({
   children,
@@ -60,6 +61,10 @@ function Sistema() {
   return <CardsSistema />;
 }
 
+function Monetizacao() {
+  return <CardsMonetizacao/>;
+}
+
 interface DataSelection {
   imagePath: string;
   html: React.ReactNode;
@@ -97,7 +102,7 @@ const DataForSelected: DataSelection[][] = [
   [],
   [{ title: "test", subtitle: "ggg", imagePath: "", html: Sistema() }],
   [],
-  [],
+  [{ title: "test", subtitle: "ggg", imagePath: "", html: Monetizacao() }],
 ];
 
 function SwithClient() {
@@ -135,7 +140,8 @@ function SwithClient() {
           {DataForSelected[Selected]?.map((obj, i) => {
             if (Selected == 0)
               return HomeCard({ children: obj.html, ...obj, i });
-            if (Selected == 2) return Sistema();
+            else if (Selected == 2) return Sistema();
+            else if (Selected == 4) return Monetizacao();
           })}
         </div>
       </div>

@@ -2,13 +2,14 @@
 import React from 'react'
 import Nav, { NavButtons } from './nav';
 import Image from 'next/image';
+import { SessionProvider } from 'next-auth/react';
 
 
 function HomeCard({
     children, title, imagePath, subtitle, i
   }: Readonly<{ children: React.ReactNode, title: string, imagePath: string, subtitle: string, i: number }>){
-    return <div className={`w-[70%] flex items-center justify-between h-[75vh] relative ${i%2==1 && "flex-row-reverse"}`}>
-        <div className='relative w-[55%] h-[80%]'>
+    return <div className={`2lg:w-[70%] w-[90%] flex items-center justify-between 2lg:h-[75vh] h-[90vh] relative ${i%2==1 && "flex-row-reverse"}`}>
+        <div className='relative 2lg:w-[55%] w-[60%] h-[80%]'>
             <p className='absolute text-white opacity-10 text-[9em] tracking-[-0.1em] font-Anton font-bold top-[-10%]'>0{i+1}</p>
             <div className={`absolute w-[99.5%] h-[99.5%] bg-BG -z-[1] top-[0.25%] right-[0.25%]`}/>
             <div className='absolute w-[30%] h-[80%] bg-BG -z-[1]'/>
@@ -22,7 +23,7 @@ function HomeCard({
                 {children}
             </div>
         </div>
-        <Image alt={imagePath} src={`/pngs/${imagePath}`} width={1000} height={1000} className='object-cover w-[40%] h-[90%] rounded-sm'/>
+        <Image alt={imagePath} src={`/pngs/${imagePath}`} width={1000} height={1000} className='object-cover 2lg:w-[40%] w-[35%] h-[90%] rounded-sm'/>
     </div>
 }
 
@@ -51,6 +52,7 @@ function SwithClient() {
     const [Selected, ChangeSeleted] = React.useState(0)
 
   return (
+    <SessionProvider>
     <div className='flex min-h-screen flex-col items-center bg-BG px-4'>
         <Nav func={ChangeSeleted} selected={Selected}/>
         <Image src={"/pngs/background.png"} width={5000} height={5000} alt='background' className='absolute w- top-0 object-contain'/>
@@ -66,13 +68,16 @@ function SwithClient() {
             </div>
         </div>
         <div className='w-full h-[100vh] absolute top-0 bg-gradient-to-tl from-transparent via-transparent to-BG/80'/>
-        <div className='w-full h-[100vh] absolute bottom-[-30%] bg-gradient-to-b from-transparent to-BG'/>
+        <div className='w-full h-[175vh] via-transparent absolute bottom-[-30%] bg-gradient-to-b from-transparent to-BG'/>
         <div className='bg-BG absolute w-full h-[70vh] bottom-[-100%]'/>
 
         <div className='z-10 w-full flex flex-col items-center justify-center gap-[10em]'>
-            {DataForSelected[Selected]?.map((obj, i) => HomeCard({children: obj.html, ...obj, i}) )}
+            {DataForSelected[Selected]?.map((obj, i) => {
+                if(Selected == 0) return HomeCard({children: obj.html, ...obj, i})
+            } )}
         </div>
     </div>
+    </SessionProvider>
   )
 }
 

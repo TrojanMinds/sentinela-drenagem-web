@@ -1,19 +1,53 @@
-import Link from "next/link";
-
-import { LatestPost } from "~/app/_components/post";
 import { getServerAuthSession } from "~/server/auth";
 import { api, HydrateClient } from "~/trpc/server";
+import StationData from "../_components/Dashboard/StationData";
+import ProfileView from "../_components/Dashboard/ProfileView";
+import NotSignInPage from "../_components/Dashboard/NotSignInPage";
+import Link from "next/link";
 
-export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
+const LinksSelectionTexts = [
+  "Following", "Show Near", "Show All"
+]
+
+export default async function Home({
+  searchParams,
+} : {
+  searchParams: { [key: string]: string | string[] | undefined};
+}) {
   const session = await getServerAuthSession();
+  void api.user.GetUser.prefetch();
 
-  // void api.post.getLatest.prefetch();
+  const selected = searchParams.selection || "0"
+
+  if(!session?.user) return <NotSignInPage/>
 
   return (
     <HydrateClient>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-        
+      <main className="flex min-h-screen flex-row items-center bg-BG overflow-hidden">
+
+        {/* Left */}
+        <div className="2lg:w-[20%] h-[100vh]">
+          <ProfileView/>
+        </div>
+
+        {/* Right */}
+        <div className="w-[80%] h-[100vh] flex flex-col items-center bg-white/10">
+          {/* Up */}
+          <div className=" w-full h-[20vh] py-2 px-8 flex pt-[1%] flex-col gap-4">
+            <p className="text-white font-Anton mt-[3%] text-2xl font-bold">Vizualização dos Sistemas de Drenagem</p>
+            <div className="w-full bg-BG h-0.5"/>
+            <div className="w-full flex items-center gap-8">
+              {[...Array(3).keys()].map(key => <Link href={`?${new URLSearchParams({selection: key.toString()})}`}
+                className={`min-w-[9em] rounded-md px-4 py-2 transition-all text-Yellow ${key.toString() == selected ? 'bg-ButtonBlue pointer-events-none' : 'bg-BG/50 hover:scale-105 opacity-50 hover:opacity-100'} `}
+                >{LinksSelectionTexts[key]}</Link>)}
+            </div>
+          </div>
+
+          {/* Down */}
+          <div className="flex flex-col items-center w-full h-[80vh] gap-4 pt-4 overflow-y-scroll px-8">
+            {[...Array(10).keys()].map(i => StationData())}
+          </div>
+        </div>
       </main>
     </HydrateClient>
   );

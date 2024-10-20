@@ -17,4 +17,11 @@
         font-weight: 400;
         font-style: normal;
     }
+
+    .ProfileViewDiv1 > div{
+        @apply shadow-xl p-1 rounded-sm bg-white bg-opacity-[0.02] gap-2 text-sm
+    }
+    .ProfileViewDiv1 > div > p{
+        @apply text-Yellow
+    }
 }

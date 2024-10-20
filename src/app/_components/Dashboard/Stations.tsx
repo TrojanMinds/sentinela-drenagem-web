@@ -13,8 +13,8 @@ async function Stations({...props} : props) {
 
   return (
     <>
-        {data.map((k,i) => <div className='w-full justify-between bg-BG/50 2xl:min-h-[20%] min-h-[30%] rounded-md p-4 flex flex-row items-center gap-4 opacity-80 hover:opacity-100 transition-all relative overflow-hidden'>
-            <div key={i} className={`absolute w-full h-full top-0 left-0 bg-gradient-to-t to-transparent
+        {data.map((k,i) => <div key={i} className='w-full justify-between bg-BG/50 2xl:min-h-[20%] min-h-[30%] rounded-md p-4 flex flex-row items-center gap-4 opacity-80 hover:opacity-100 transition-all relative overflow-hidden'>
+            <div className={`absolute w-full h-full top-0 left-0 bg-gradient-to-t to-transparent
                 ${k.Status < 25 ? 'from-green-500/75' : k.Status < 50 ? "from-green-500/50" : k.Status < 75 ? "from-red-500/50" : "from-red-500/75" }
             `}/>
             <div className='flex flex-row min-w-[50%] h-full gap-4 z-10'>

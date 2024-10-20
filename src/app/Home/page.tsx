@@ -1,12 +1,12 @@
 import { getServerAuthSession } from "~/server/auth";
 import { api, HydrateClient } from "~/trpc/server";
-import StationData from "../_components/Dashboard/StationData";
 import ProfileView from "../_components/Dashboard/ProfileView";
 import NotSignInPage from "../_components/Dashboard/NotSignInPage";
 import Link from "next/link";
+import Stations from "../_components/Dashboard/Stations";
 
 const LinksSelectionTexts = [
-  "Following", "Show Near", "Show All"
+  "Show All", "Following", "Show Near"
 ]
 
 export default async function Home({
@@ -17,7 +17,9 @@ export default async function Home({
   const session = await getServerAuthSession();
   void api.user.GetUser.prefetch();
 
-  const selected = searchParams.selection || "0"
+  const selected = (searchParams.selection || "0") as string
+  if(selected == "0") void api.user.GetUserFollowings.prefetch();
+  else if(selected == "1") void api.user.GetAllSatations.prefetch();
 
   if(!session?.user) return <NotSignInPage/>
 
@@ -44,8 +46,8 @@ export default async function Home({
           </div>
 
           {/* Down */}
-          <div className="flex flex-col items-center w-full h-[80vh] gap-4 pt-4 overflow-y-scroll px-8">
-            {[...Array(10).keys()].map(i => StationData())}
+          <div className="flex flex-col items-center w-full h-[80vh] gap-8 pt-4 overflow-y-scroll px-8">
+            <Stations i={selected}/>
           </div>
         </div>
       </main>

@@ -23,7 +23,8 @@ export const UserRouter = createTRPCRouter({
     GetUserFollowings: protectedProcedure.query(async ({ctx}) => {
             const data_ = await ctx.db.station.findMany({
                 where: {FollowersIds: {has: ctx.session.user.id}},
-                select: {Status: true, Locale: true, Umidity: true, Temperature: true, id: true, Latitude: true, Longitude: true}
+                select: {Status: true, Locale: true, Umidity: true, Temperature: true, id: true, Latitude: true, Longitude: true},
+                orderBy: {Status: "desc"}
             })
 
             return data_ ?? null
@@ -37,5 +38,19 @@ export const UserRouter = createTRPCRouter({
                     email: true, image: true, Locale: true, name: true, Latitude: true, Longitude: true
                 }
             })
+        }),
+
+    GetAllSatations: publicProcedure.query(async ({ctx}) => {
+        return await ctx.db.station.findMany({
+            select: {Status: true, id: true, Latitude: true, Locale: true, Longitude: true, Temperature: true, Umidity: true},
+            orderBy: {Status: "desc"}
+        })
+    }),
+
+    isFolowed: protectedProcedure.input(z.object({id: z.string()}))
+        .query(async ({ctx, input}) => {
+            return await ctx.db.user.findFirstOrThrow({
+                where: {id: ctx.session.user.id, FollowingIds: {has: input.id}}
+            }) ?? null
         })
 });

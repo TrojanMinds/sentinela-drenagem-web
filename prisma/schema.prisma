@@ -63,6 +63,22 @@ model User {
     accounts      Account[]
     sessions      Session[]
     posts         Post[]
+
+    Locale String?
+    Following Station[] @relation(fields: [FollowingIds], references: [id])
+    FollowingIds String[] @db.ObjectId
+}
+
+model Station{
+    id String @id @map("_id") @default(auto()) @db.ObjectId
+    Status Float // Danger level from 0% to 100%
+    Latitude Float
+    Longitude Float
+    Umidity Float
+    Temperature Float
+
+    Followers User[] @relation(fields: [FollowersIds], references: [id])
+    FollowersIds String[] @db.ObjectId
 }
 
 model VerificationToken {

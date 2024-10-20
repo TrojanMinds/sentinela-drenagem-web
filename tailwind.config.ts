@@ -12,7 +12,8 @@ export default {
         BG: "#0B1D26",
         Yellow:"#FBD784",
         Blue: "#7EE3FC",
-        ButtonBlue: "#1B7CEB"
+        ButtonBlue: "#1B7CEB",
+        DarkerBlue: "#08171F"
       }
     },
   },

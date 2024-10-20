@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const buttons = ["Assine aqui", "Dashboard", "Home", "Sistema", "Comunidade"]
+export const NavButtons = ["Assine aqui", "Dashboard", "Home", "Sistema", "Comunidade"]
 
 interface props{
     func: React.Dispatch<React.SetStateAction<number>>,
@@ -25,7 +25,7 @@ function Nav({...props} : props) {
                 <p className='font-Anton text-[1.1em] text-white'>Sentinela <br/> de Drenagem</p>
             </div>
             <div className='gap-10 flex items-center justify-center'>
-                {buttons.map((btn, i) => button_(i, btn))}
+                {NavButtons.map((btn, i) => button_(i, btn))}
             </div>
         </div>
     </div>

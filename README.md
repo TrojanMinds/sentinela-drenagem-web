@@ -34,11 +34,15 @@ O simulador Wokwi foi utilizado para desenvolver e testar o protótipo do dispos
 
 ## Plataforma
 
+![pré-visualização home](./public/pngs/preview-homepage.png)
+
 A plataforma do **Sentinela de Drenagem** é a interface central que conecta todos os dispositivos IoT distribuídos pela cidade e oferece uma solução robusta para monitoramento, análise e gestão das condições de drenagem urbana. Abaixo estão descritas as principais funcionalidades da plataforma, divididas em categorias que abrangem desde o monitoramento em tempo real até a gestão de manutenção e comunicação com a comunidade.
 
 ### Monitoramento em Tempo Real
 
 A principal função da plataforma é monitorar, em tempo real, as condições dos sistemas de drenagem urbana por meio dos dados enviados pelos dispositivos IoT. Isso inclui:
+
+![pré-visualização do dashboard](./public/pngs/dashboard-preview.png)
 
 - **Nível de água**: O sistema exibe informações detalhadas sobre o nível da água em bueiros e canais, utilizando os dados do sensor ultrassônico HC-SR04. Qualquer elevação ou queda fora do normal é detectada imediatamente, permitindo a identificação de possíveis obstruções ou falhas no sistema de drenagem.
   
@@ -59,6 +63,8 @@ O sistema de alertas é uma parte essencial da plataforma, pois permite a notifi
 - **Escalonamento de alertas**: Diferentes níveis de alerta são emitidos com base na gravidade da situação. Manutenções preventivas, por exemplo, geram alertas direcionados a equipes de campo, enquanto situações críticas, como risco de enchente, são comunicadas a autoridades e à população em geral.
 
 ### Relatórios e Histórico de Dados
+
+![pré visualização painel de dados](./public/pngs/preview-data.png)
 
 A plataforma não só permite o monitoramento em tempo real, mas também oferece ferramentas robustas para análise e tomada de decisão com base em dados históricos. Entre essas ferramentas estão:
 
@@ -88,6 +94,8 @@ Outra funcionalidade avançada da plataforma é sua capacidade de integrar dados
 
 
 ### Módulo de Monetização e Sustentabilidade
+
+![pré-visualização da página de monetização](./public/pngs/preview-monetizacao.png)
 
 Para garantir a sustentabilidade financeira do projeto, a plataforma oferece diferentes modelos de monetização e parcerias com prefeituras e empresas de manutenção urbana. Entre as opções estão:
 

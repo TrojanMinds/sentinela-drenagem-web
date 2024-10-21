@@ -1,5 +1,12 @@
 import "~/styles/globals.css";
 
+import { Anton } from '@next/font/google';
+
+const anton = Anton({
+  subsets: ['latin'], 
+  weight: '400',      
+});
+
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
@@ -16,7 +23,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>
+      <body className={anton.className}>
         <TRPCReactProvider>
           {children}
         </TRPCReactProvider>

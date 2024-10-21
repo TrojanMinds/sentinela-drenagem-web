@@ -7,6 +7,7 @@ import { SessionProvider } from "next-auth/react";
 import CardsSistema from "../cardsistema";
 import ComunidadeCard from "./ComunidadeCard";
 import CardsMonetizacao from "../cardsmonetizacao";
+import DashboardComponent from "../dashboard";
 
 function HomeCard({
   children,
@@ -56,6 +57,10 @@ function HomeCard({
       />
     </div>
   );
+}
+
+function Dashboard () {
+  return <DashboardComponent></DashboardComponent>
 }
 
 function Sistema() {
@@ -188,7 +193,7 @@ const DataForSelected: DataSelection[][] = [
       ),
     },
   ],
-  [],
+  [{ title: "test", subtitle: "ggg", imagePath: "", html: Dashboard() }],
   [{ title: "test", subtitle: "ggg", imagePath: "", html: Sistema() }],
 
   [
@@ -401,6 +406,7 @@ function SwithClient() {
           {DataForSelected[Selected]?.map((obj, i) => {
             if (Selected == 0)
               return HomeCard({ children: obj.html, ...obj, i });
+            else if (Selected == 1) return Dashboard();
             else if (Selected == 2) return Sistema();
             else if (Selected == 3)
               return ComunidadeCard({ children: obj.html, ...obj, i });

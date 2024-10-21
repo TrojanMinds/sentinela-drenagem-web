@@ -34,6 +34,8 @@ O simulador Wokwi foi utilizado para desenvolver e testar o protótipo do dispos
 
 ## Plataforma
 
+Clique [aqui](https://sentinela-drenagem-web.vercel.app/) para visualizar a versão desktop online.
+
 ![pré-visualização home](./public/pngs/preview-homepage.png)
 
 A plataforma do **Sentinela de Drenagem** é a interface central que conecta todos os dispositivos IoT distribuídos pela cidade e oferece uma solução robusta para monitoramento, análise e gestão das condições de drenagem urbana. Abaixo estão descritas as principais funcionalidades da plataforma, divididas em categorias que abrangem desde o monitoramento em tempo real até a gestão de manutenção e comunicação com a comunidade.

@@ -34,7 +34,7 @@ O simulador Wokwi foi utilizado para desenvolver e testar o protótipo do dispos
 
 ## Plataforma
 
-Clique [aqui](https://sentinela-drenagem-web.vercel.app/) para visualizar a versão desktop online.
+[Clique aqui para visualizar a versão desktop online.](https://sentinela-drenagem-web.vercel.app/) 
 
 ![pré-visualização home](./public/pngs/preview-homepage.png)
 

@@ -24,13 +24,13 @@ O coração do sistema **Sentinela de Drenagem** é um dispositivo IoT robusto e
 ### Funcionamento Técnico:
 O microcontrolador ESP32 lê os dados tanto do sensor HC-SR04 quanto do DHT22 de forma contínua. Utilizando a conectividade Wi-Fi, ele envia essas informações para o servidor, onde os dados são processados e exibidos na plataforma de monitoramento. O código do ESP32 foi desenvolvido em C++, utilizando o framework Arduino, devido à sua simplicidade e ampla compatibilidade com dispositivos IoT. A plataforma **PlatformIO**, integrada ao Visual Studio Code, foi utilizada como ambiente de desenvolvimento para programar e depurar o microcontrolador, otimizando o processo de criação e implementação do código.
 
-> Confira o código completo e instruções detalhadas sobre o dispositivo IoT no [repositório oficial](https://github.com/seu-repositorio-dispositivo).
+> Confira o código completo sobre o dispositivo IoT no [repositório oficial](https://github.com/TrojanMinds/sentinela-drenagem-iot).
 
 ## Protótipo do Projeto (Wokwi)
 
 O simulador Wokwi foi utilizado para desenvolver e testar o protótipo do dispositivo IoT, garantindo que todos os componentes funcionem corretamente antes da implementação física.
 
-![Imagem do dispositivo no simulador Wokwi](#)
+![pré-visualização do dispositivo IOT no simulador](./public/pngs/preview-iot-wokwi.jpg)
 
 ## Plataforma
 
@@ -118,3 +118,34 @@ O projeto também foi concebido para integrar novas tecnologias conforme elas se
 - **Atualizações de software**: A arquitetura do sistema suporta atualizações contínuas, garantindo que a plataforma possa evoluir sem interrupções no serviço. Isso permite que a solução se mantenha competitiva e continue a atender às necessidades crescentes de diferentes cidades e regiões.
 
 Em resumo, a escalabilidade do **Sentinela de Drenagem** é um de seus principais diferenciais, garantindo que a solução possa ser implantada em diferentes contextos urbanos, crescer com a demanda e continuar oferecendo uma experiência de alta performance, independentemente do número de sensores ou da complexidade da rede de drenagem monitorada.
+
+# O time
+
+## Henrique
+
+💻Desenvolvedor Web e C/C++
+📧 henriquemelo0983@gmail.com
+💼 LinkedIn: [Henrique Melo](https://www.linkedin.com/in/henrique-de-oliveira-melo-933a41203/)
+🐈‍⬛ GitHub: [HenriqueMelo2007](https://github.com/HenriqueMelo2007)
+
+## Matheus
+
+🖥️Desenvolvedor Fullstack
+📧 shakii876954@gmail.com
+💼 LinkedIn: [Matheus](https://www.linkedin.com/in/mateus-a-o-87877226a/)
+🐈‍⬛ GitHub: [Pechino](https://github.com/Pechino)
+
+
+## Gisele
+
+🎨Designer
+📧 gisele.ramos.ismart@gmail.com
+💼 LinkedIn: [Gisele Ramos](https://www.linkedin.com/in/gisele-ramos-98429a289/)
+🐈‍⬛ GitHub: [MatthTsxo](https://github.com/MatthTsxo)
+
+## Maitê
+
+🌐Comunicação e inovação em tecnologia
+📧 maite.nascimento.ismart@gmail.com
+💼 LinkedIn: [Maitê Silva](https://www.linkedin.com/in/maite-silva?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+🐈‍⬛ GitHub: [maite-silva](https://github.com/maite-silva)

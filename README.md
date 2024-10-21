@@ -138,12 +138,12 @@ Em resumo, a escalabilidade do **Sentinela de Drenagem** é um de seus principai
 💼 LinkedIn: [Henrique Melo](https://www.linkedin.com/in/henrique-de-oliveira-melo-933a41203/)   
 🐈‍⬛ GitHub: [HenriqueMelo2007](https://github.com/HenriqueMelo2007)   
 
-## Matheus
+## Mateus
 
 🖥️Desenvolvedor Fullstack  
 📧 shakii876954@gmail.com   
-💼 LinkedIn: [Matheus](https://www.linkedin.com/in/mateus-a-o-87877226a/)    
-🐈‍⬛ GitHub: [Pechino](https://github.com/Pechino)   
+💼 LinkedIn: [Mateus](https://www.linkedin.com/in/mateus-a-o-87877226a/)    
+🐈‍⬛ GitHub: [MatthTsxo](https://github.com/MatthTsxo)    
 
 
 ## Gisele
@@ -151,7 +151,7 @@ Em resumo, a escalabilidade do **Sentinela de Drenagem** é um de seus principai
 🎨Designer  
 📧 gisele.ramos.ismart@gmail.com  
 💼 LinkedIn: [Gisele Ramos](https://www.linkedin.com/in/gisele-ramos-98429a289/)   
-🐈‍⬛ GitHub: [MatthTsxo](https://github.com/MatthTsxo)   
+🐈‍⬛ GitHub: [Pechino](https://github.com/Pechino)   
 
 ## Maitê
 

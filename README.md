@@ -131,29 +131,29 @@ Em resumo, a escalabilidade do **Sentinela de Drenagem** é um de seus principai
 
 ## Henrique
 
-💻Desenvolvedor Web e C/C++
-📧 henriquemelo0983@gmail.com
-💼 LinkedIn: [Henrique Melo](https://www.linkedin.com/in/henrique-de-oliveira-melo-933a41203/)
-🐈‍⬛ GitHub: [HenriqueMelo2007](https://github.com/HenriqueMelo2007)
+💻Desenvolvedor Web e C/C++    
+📧 henriquemelo0983@gmail.com   
+💼 LinkedIn: [Henrique Melo](https://www.linkedin.com/in/henrique-de-oliveira-melo-933a41203/)   
+🐈‍⬛ GitHub: [HenriqueMelo2007](https://github.com/HenriqueMelo2007)   
 
 ## Matheus
 
-🖥️Desenvolvedor Fullstack
-📧 shakii876954@gmail.com
-💼 LinkedIn: [Matheus](https://www.linkedin.com/in/mateus-a-o-87877226a/)
-🐈‍⬛ GitHub: [Pechino](https://github.com/Pechino)
+🖥️Desenvolvedor Fullstack  
+📧 shakii876954@gmail.com   
+💼 LinkedIn: [Matheus](https://www.linkedin.com/in/mateus-a-o-87877226a/)    
+🐈‍⬛ GitHub: [Pechino](https://github.com/Pechino)   
 
 
 ## Gisele
 
-🎨Designer
-📧 gisele.ramos.ismart@gmail.com
-💼 LinkedIn: [Gisele Ramos](https://www.linkedin.com/in/gisele-ramos-98429a289/)
-🐈‍⬛ GitHub: [MatthTsxo](https://github.com/MatthTsxo)
+🎨Designer  
+📧 gisele.ramos.ismart@gmail.com  
+💼 LinkedIn: [Gisele Ramos](https://www.linkedin.com/in/gisele-ramos-98429a289/)   
+🐈‍⬛ GitHub: [MatthTsxo](https://github.com/MatthTsxo)   
 
 ## Maitê
 
-🌐Comunicação e inovação em tecnologia
-📧 maite.nascimento.ismart@gmail.com
-💼 LinkedIn: [Maitê Silva](https://www.linkedin.com/in/maite-silva?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+🌐Comunicação e inovação em tecnologia   
+📧 maite.nascimento.ismart@gmail.com  
+💼 LinkedIn: [Maitê Silva](https://www.linkedin.com/in/maite-silva?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)  
 🐈‍⬛ GitHub: [maite-silva](https://github.com/maite-silva)

@@ -17,7 +17,7 @@ export default async function Home({
   const session = await getServerAuthSession();
   void api.user.GetUser.prefetch();
 
-  const selected = (searchParams.selection || "0") as string
+  const selected = (searchParams.selection ?? "0") as string
   if(selected == "0") void api.user.GetUserFollowings.prefetch();
   else if(selected == "1") void api.user.GetAllSatations.prefetch();
 
@@ -39,7 +39,7 @@ export default async function Home({
             <p className="text-white font-Anton mt-[3%] text-2xl font-bold">Vizualização dos Sistemas de Drenagem</p>
             <div className="w-full bg-BG h-0.5"/>
             <div className="w-full flex items-center gap-8">
-              {[...Array(3).keys()].map(key => <Link href={`?${new URLSearchParams({selection: key.toString()})}`}
+              {[...Array(3).keys()].map(key => <Link key={key} href={`?${new URLSearchParams({selection: key.toString()})}`}
                 className={`min-w-[9em] rounded-md px-4 py-2 transition-all text-Yellow ${key.toString() == selected ? 'bg-ButtonBlue pointer-events-none' : 'bg-BG/50 hover:scale-105 opacity-50 hover:opacity-100'} `}
                 >{LinksSelectionTexts[key]}</Link>)}
             </div>

@@ -23,7 +23,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className={anton.className}>
+      <body className={`${anton.className}  font-anton`}>
         <TRPCReactProvider>
           {children}
         </TRPCReactProvider>
